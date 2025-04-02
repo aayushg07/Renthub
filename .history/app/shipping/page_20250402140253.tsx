@@ -1,7 +1,9 @@
 "use client";
 
 import { Card, CardContent } from "@/app/components/ui/Card";
+import { Button } from "@/app/components/ui/Button";
 import { ScrollArea } from "@/app/components/ui/Scrollarea";
+import { Separator } from "@/app/components/ui/Separator";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCheck, FaTruck, FaBox, FaShippingFast, FaExchangeAlt, FaMapMarkerAlt, FaClock, FaMoneyBillWave } from "react-icons/fa";

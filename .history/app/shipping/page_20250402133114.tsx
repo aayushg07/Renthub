@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/app/components/ui/Card";
+import { Button } from "@/app/components/ui/Button";
 import { ScrollArea } from "@/app/components/ui/Scrollarea";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";

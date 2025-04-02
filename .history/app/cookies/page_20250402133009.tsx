@@ -2,12 +2,13 @@
 
 import { Card, CardContent } from "@/app/components/ui/Card";
 import { ScrollArea } from "@/app/components/ui/Scrollarea";
+import { Separator } from "@/app/components/ui/Separator";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCheck, FaTruck, FaBox, FaShippingFast, FaExchangeAlt, FaMapMarkerAlt, FaClock, FaMoneyBillWave } from "react-icons/fa";
+import { FaCheck, FaCookieBite, FaLock, FaChartPie, FaAd, FaUserCog, FaTrash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
-export default function ShippingPolicy() {
+export default function CookiesPolicy() {
   const [agreed, setAgreed] = useState(false);
   const [activeSection, setActiveSection] = useState<number | null>(null);
   const router = useRouter();
@@ -15,45 +16,51 @@ export default function ShippingPolicy() {
   const sections = [
     {
       id: 1,
-      title: "Shipping Overview",
-      icon: <FaTruck className="text-blue-500" />,
-      content: "We offer reliable shipping services to all our customers. All orders are processed within 1-2 business days after order confirmation."
+      title: "What Are Cookies",
+      icon: <FaCookieBite className="text-blue-500" />,
+      content: "Cookies are small text files stored on your device when you visit our website. They help us provide a better user experience and understand how visitors interact with our site."
     },
     {
       id: 2,
-      title: "Shipping Methods",
-      icon: <FaShippingFast className="text-purple-500" />,
-      content: "We provide several shipping options including standard shipping (3-5 business days), express shipping (1-2 business days), and overnight shipping (next business day)."
+      title: "How We Use Cookies",
+      icon: <FaChartPie className="text-purple-500" />,
+      content: "We use cookies to remember your preferences, analyze website traffic, personalize content, and improve our services. Some cookies are essential for the website to function properly."
     },
     {
       id: 3,
-      title: "Shipping Costs",
-      icon: <FaMoneyBillWave className="text-green-500" />,
-      content: "Shipping costs vary depending on the shipping method selected and the destination. Free shipping is available for orders over $50."
+      title: "Types of Cookies",
+      icon: <FaCookieBite className="text-green-500" />,
+      content: "We use session cookies (temporary) and persistent cookies (remain on your device). We also use first-party cookies (set by us) and third-party cookies (set by our partners)."
     },
     {
       id: 4,
-      title: "Order Processing Time",
-      icon: <FaClock className="text-yellow-500" />,
-      content: "All orders are processed within 1-2 business days. Orders placed on weekends or holidays will be processed the next business day."
+      title: "Essential Cookies",
+      icon: <FaLock className="text-yellow-500" />,
+      content: "These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions made by you such as setting your privacy preferences."
     },
     {
       id: 5,
-      title: "International Shipping",
-      icon: <FaMapMarkerAlt className="text-red-500" />,
-      content: "We ship internationally to most countries. Additional customs fees, taxes, and duties may apply and are the responsibility of the customer."
+      title: "Analytics Cookies",
+      icon: <FaChartPie className="text-red-500" />,
+      content: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are popular and how visitors move around the site."
     },
     {
       id: 6,
-      title: "Order Tracking",
-      icon: <FaBox className="text-indigo-500" />,
-      content: "Once your order has shipped, you will receive a confirmation email with tracking information. You can track your order directly on our website."
+      title: "Marketing Cookies",
+      icon: <FaAd className="text-indigo-500" />,
+      content: "These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant ads on other sites."
     },
     {
       id: 7,
-      title: "Returns & Exchanges",
-      icon: <FaExchangeAlt className="text-pink-500" />,
-      content: "If you need to return or exchange an item, please contact our customer service within 30 days of receiving your order. Return shipping costs may apply."
+      title: "Managing Cookies",
+      icon: <FaUserCog className="text-pink-500" />,
+      content: "You can control and/or delete cookies as you wish. You can delete all cookies already on your computer and set most browsers to prevent them from being placed."
+    },
+    {
+      id: 8,
+      title: "Changes to This Policy",
+      icon: <FaCookieBite className="text-blue-400" />,
+      content: "We may update our Cookies Policy from time to time. We will notify you of any changes by posting the new policy on this page with a new 'Last Updated' date."
     }
   ];
 
@@ -72,12 +79,10 @@ export default function ShippingPolicy() {
         transition={{ duration: 0.5 }}
         className="text-center mb-8"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Shipping Policy
+        <h1 className="text-4xl md:text-5xl font-extrabold bg-white bg-clip-text text-transparent">
+          Cookies Policy
         </h1>
-        <p className="mt-2 text-gray-500 dark:text-gray-400">
-          Last updated: {new Date().toLocaleDateString()}
-        </p>
+        
         <div className="my-4 bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600 h-0.5" />
       </motion.div>
 
@@ -90,7 +95,7 @@ export default function ShippingPolicy() {
         <Card className="border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg overflow-hidden backdrop-blur-sm bg-white/90 dark:bg-gray-900/90">
           <div className="flex flex-col md:flex-row">
             {/* Sidebar Navigation */}
-            <div className="w-full md:w-64 p-4 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+            {/* <div className="w-full md:w-64 p-4 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
               <h3 className="font-semibold mb-4 text-gray-700 dark:text-gray-300">Quick Navigation</h3>
               <nav className="space-y-2">
                 {sections.map((section) => (
@@ -114,7 +119,7 @@ export default function ShippingPolicy() {
                   </motion.button>
                 ))}
               </nav>
-            </div>
+            </div> */}
 
             {/* Policy Content */}
             <ScrollArea className="h-[500px] flex-1">
@@ -178,7 +183,7 @@ export default function ShippingPolicy() {
               </AnimatePresence>
             </div>
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              I acknowledge the Shipping Policy
+              I accept the use of cookies as described
             </span>
           </label>
 
@@ -199,7 +204,7 @@ export default function ShippingPolicy() {
                 Continue to RentHub
               </motion.span>
             ) : (
-              "Please acknowledge to continue"
+              "Please accept to continue"
             )}
           </button>
         </div>

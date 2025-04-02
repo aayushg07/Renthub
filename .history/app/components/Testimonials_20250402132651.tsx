@@ -68,7 +68,7 @@ const HomePage = () => {
             Loved by Creators & Professionals
           </h2>
           <p className="text-lg text-blue-600 max-w-2xl mx-auto">
-            Do not just take our word for it
+            Don&apos;t just take our word for it
           </p>
         </div>
 
@@ -110,9 +110,7 @@ const HomePage = () => {
                       />
                     ))}
                   </div>
-                  <blockquote className="text-gray-600 mb-6 italic">
-                    "{testimonial.text}"
-                  </blockquote>
+                  <blockquote className="text-gray-600 mb-6 italic"> "{testimonial.text}</blockquote>
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">
                       {testimonial.name.charAt(0)}

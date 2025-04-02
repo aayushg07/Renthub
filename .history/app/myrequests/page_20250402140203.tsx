@@ -45,7 +45,7 @@ export default function MyRequestsPage() {
 
       {requests.length === 0 ? (
         <div className="bg-gray-800/50 rounded-lg p-8 text-center border border-gray-700">
-          <p className="text-gray-400">You have not made any rental requests yet?</p>
+          <p className="text-gray-400">You have not yet made any rental requests yet.</p>
         </div>
       ) : (
         <div className="space-y-4">

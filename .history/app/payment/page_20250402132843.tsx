@@ -215,7 +215,7 @@ export default function PaymentPage() {
               </div>
 
               <div className="mt-8">
-                <h3 className="text-sm font-medium text-gray-700 mb-2">What is included:</h3>
+                <h3 className="text-sm font-medium text-gray-700 mb-2">What&apos;s included:</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start">
                     <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

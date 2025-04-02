@@ -68,7 +68,7 @@ const HomePage = () => {
             Loved by Creators & Professionals
           </h2>
           <p className="text-lg text-blue-600 max-w-2xl mx-auto">
-            Do not just take our word for it
+            Don't just take our word for it
           </p>
         </div>
 

@@ -249,7 +249,7 @@ export default function FAQPage() {
             Still need help?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-            Cannot find the answer you're looking for? Our support team is ready to help you with any questions.
+            Can&apos;t find the answer you&apos;re looking for? Our support team is ready to help you with any questions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
